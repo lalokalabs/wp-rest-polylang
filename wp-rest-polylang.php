@@ -55,7 +55,7 @@ class WP_REST_polylang
 			$post_type,
 			"polylang_current_lang",
 			array(
-				"get_callback" => array( self, "get_current_lang" ),
+				"get_callback" => array( __CLASS__, "get_current_lang" ),
 				"schema" => null
 			)
 		);
@@ -64,7 +64,7 @@ class WP_REST_polylang
 			$post_type,
 			"polylang_translations",
 			array(
-				"get_callback" => array( self, "get_translations"  ),
+				"get_callback" => array( __CLASS__, "get_translations"  ),
 				"schema" => null
 			)
 		);
