@@ -80,7 +80,8 @@ class WP_REST_polylang
 		return array_reduce($translations, function ($carry, $translation) {
 			$item = array(
 				'locale' => pll_get_post_language($translation, 'locale'),
-				'id' => $translation
+				'id' => $translation,
+				'slug' => basename(get_permalink($translation))
 			);
 
 			array_push($carry, $item);
